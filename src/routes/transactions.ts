@@ -17,6 +17,12 @@ export async function transactionRoutes(app: FastifyInstance) {
     const transactions = await knex('transactions').where('id', id).first()
     return { transactions } 
   })
+
+  app.get('/summary', async () => {
+    const summary = await knex('transactions').sum('amount', { as: 'amount'})
+    return { summary }
+  })
+
   app.post('/', async (req, reply) => {
     const createTransactionBodySchema = z.object({
       title: z.string(),
