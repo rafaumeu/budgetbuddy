@@ -1,17 +1,24 @@
+import { execSync } from 'node:child_process'
 import request from 'supertest'
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 import { app } from '../app'
 
 beforeAll(async () => {
   await app.ready()
+  execSync('npm run knex migrate:latest')
 })
 afterAll(async () => {
   await app.close()
 })
+afterEach(() => {
+  execSync('npm run knex migrate:rollback --all')
+  execSync('npm run knex migrate:latest')
+})
+
 describe('Transactions routes', () => {
   
   it('should be able to create a new transaction', async () => {
-    const response = await request(app.server)
+    await request(app.server)
     .post('/transactions')
     .send({
       title: 'New transaction',
@@ -33,7 +40,6 @@ describe('Transactions routes', () => {
       .get('/transactions')
       .set('Cookie', cookies)
       .expect(200)
-    console.log(listTransactionsResponse.body)
     expect(listTransactionsResponse.body.transactions).toEqual([
       expect.objectContaining({
         title: 'New transaction',
