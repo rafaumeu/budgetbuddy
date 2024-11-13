@@ -45,6 +45,7 @@ export async function transactionRoutes(app: FastifyInstance) {
     const { sessionId } = req.cookies
     const summary = await knex('transactions').sum('amount', { as: 'amount'})
     .where('session_id', sessionId)
+    .first()
     return { summary }
   })
 
@@ -60,7 +61,7 @@ export async function transactionRoutes(app: FastifyInstance) {
 
     if(!sessionId) {
       sessionId = crypto.randomUUID()
-      reply.setCookie('session_id', sessionId, {
+      reply.setCookie('sessionId', sessionId, {
         path: '/',
         maxAge: 60 * 60 * 24 * 7 // 7 days
       })
