@@ -1,13 +1,6 @@
-import cookie from '@fastify/cookie'
-import fastify from 'fastify'
-import { transactionRoutes } from './routes/transactions'
+import { app } from './app'
 
-const app = fastify()
 
-app.register(cookie)
-app.register(transactionRoutes, {
-  prefix: 'transactions'
-})
 app
   .listen({
     port: 3333,
