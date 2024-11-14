@@ -2,6 +2,9 @@
   "name": "budgetbuddy",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsx watch --no-warnings src/server.ts",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
@@ -18,6 +21,7 @@
     "@types/node": "^18.11.18",
     "@types/supertest": "2.0.12",
     "eslint": "^8.33.0",
+    "sqlite3": "^5.1.4",
     "supertest": "6.3.3",
     "tsup": "^8.3.5",
     "tsx": "3.12.2",
@@ -29,7 +33,7 @@
     "dotenv": "^16.4.5",
     "fastify": "^4.12.0",
     "knex": "^2.4.2",
-    "sqlite3": "^5.1.4",
+    "pg": "^8.13.1",
     "zod": "^3.23.8"
   }
 }
