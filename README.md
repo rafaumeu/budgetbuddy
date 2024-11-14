@@ -1,12 +1,15 @@
 # BudgetBuddy
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/rafaumeu/budgetbuddy)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rafaumeu/budgetbuddy/main.yml)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![GitHub issues](https://img.shields.io/github/issues/rafaumeu/budgetbuddy)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/rafaumeu/budgetbuddy)
-![GitHub License](https://img.shields.io/github/license/rafaumeu/budgetbuddy)
+![License](https://img.shields.io/badge/License-ISC-blue.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rafaumeu/budgetbuddy)
-![Node.js Version](https://img.shields.io/node/v/rafaumeu/budgetbuddy)
+![Node.js](https://img.shields.io/badge/Node.js-v18.0.0-brightgreen)
+![Fastify](https://img.shields.io/badge/Fastify-v4.12.0-blue)
+![SQLite](https://img.shields.io/badge/SQLite-v5.1.4-yellow)
+![Test Status](https://img.shields.io/badge/tests-passing-brightgreen)
 
 Bem-vindo ao **BudgetBuddy**, o seu gerenciador de transações pessoal! Com o BudgetBuddy, você pode facilmente acompanhar suas finanças, registrar suas transações e obter um resumo da sua conta em um piscar de olhos. Seja você um usuário casual ou um planejador financeiro, o BudgetBuddy foi projetado para atender às suas necessidades.
 
