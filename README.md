@@ -1,85 +1,94 @@
 # BudgetBuddy
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/rafaumeu/budgetbuddy)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![GitHub issues](https://img.shields.io/github/issues/rafaumeu/budgetbuddy)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/rafaumeu/budgetbuddy)
-![License](https://img.shields.io/badge/License-ISC-blue.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/rafaumeu/budgetbuddy)
-![Node.js](https://img.shields.io/badge/Node.js-v18.0.0-brightgreen)
-![Fastify](https://img.shields.io/badge/Fastify-v4.12.0-blue)
-![SQLite](https://img.shields.io/badge/SQLite-v5.1.4-yellow)
-![Test Status](https://img.shields.io/badge/tests-passing-brightgreen)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/rafaumeu/budgetbuddy) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![GitHub issues](https://img.shields.io/github/issues/rafaumeu/budgetbuddy) ![GitHub pull requests](https://img.shields.io/github/issues-pr/rafaumeu/budgetbuddy) ![License](https://img.shields.io/badge/License-ISC-blue.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/rafaumeu/budgetbuddy) ![Node.js](https://img.shields.io/badge/Node.js-v18.0.0-brightgreen) ![Fastify](https://img.shields.io/badge/Fastify-v4.12.0-blue) ![SQLite](https://img.shields.io/badge/SQLite-v5.1.4-yellow) ![Test Status](https://img.shields.io/badge/tests-passing-brightgreen)
 
-Bem-vindo ao **BudgetBuddy**, o seu gerenciador de transações pessoal! Com o BudgetBuddy, você pode facilmente acompanhar suas finanças, registrar suas transações e obter um resumo da sua conta em um piscar de olhos. Seja você um usuário casual ou um planejador financeiro, o BudgetBuddy foi projetado para atender às suas necessidades.
+Welcome to **BudgetBuddy**, your personal transaction manager! With BudgetBuddy, you can easily track your finances, record your transactions, and get an overview of your account in the blink of an eye. Whether you're a casual user or a financial planner, BudgetBuddy is designed to meet your needs.
 
-## Funcionalidades
+## Features
+✨ **Key Features:**
+- **Transaction Creation:** Easily record new transactions, whether credit or debit.
+- **Account Summary:** Get a clear and concise summary of your account, helping you make informed financial decisions.
+- **Transaction Listing:** View all transactions you've made, organized conveniently.
+- **Single Transaction View:** See the details of a specific transaction whenever you need.
 
-✨ **Principais Recursos:**
+## Business Requirements
+- 💰 **Transaction Types:** Transactions can be credit (which add to the total) or debit (which subtract from the total).
+- 👤 **User Identification:** The system ensures that each user can only view their own transactions, maintaining privacy and security.
+- 🔍 **Full Control:** You have total control over your transactions, able to view only those you've created.
 
-- **Criação de Transações:** Registre novas transações com facilidade, seja crédito ou débito.
-- **Resumo da Conta:** Obtenha um resumo claro e conciso da sua conta, ajudando você a tomar decisões financeiras informadas.
-- **Listagem de Transações:** Visualize todas as transações que você já realizou, organizadas de forma prática.
-- **Visualização de Transação Única:** Veja os detalhes de uma transação específica sempre que precisar.
+## Technologies Used
+- **Node.js**: For backend construction.
+- **Fastify**: A highly efficient web framework for Node.js.
+- **Knex**: A SQL query builder that facilitates database interaction.
+- **SQLite3**: A lightweight and reliable database to store your transactions.
+- **Zod**: For data validation, ensuring your inputs are always safe and consistent.
 
-## Requisitos de Negócio
-
-- 💰 **Tipos de Transação:** As transações podem ser do tipo crédito (que somam ao total) ou débito (que subtraem do total).
-- 👤 **Identificação do Usuário:** O sistema garante que cada usuário possa visualizar apenas suas próprias transações, mantendo sua privacidade e segurança.
-- 🔍 **Controle Total:** Você tem controle total sobre suas transações, podendo visualizar apenas aquelas que você criou.
-
-## Tecnologias Utilizadas
-
-- **Node.js**: Para a construção do backend.
-- **Fastify**: Um framework web altamente eficiente para Node.js.
-- **Knex**: Um construtor de consultas SQL que facilita a interação com o banco de dados.
-- **SQLite3**: Um banco de dados leve e confiável para armazenar suas transações.
-- **Zod**: Para validação de dados, garantindo que suas entradas sejam sempre seguras e consistentes.
-
-## Como Começar
-
-1. **Clone o repositório:**
-
+## Getting Started
+1. **Clone the repository:**
 ```bash
-git clone https://github.com/seuusuario/budgetbuddy.git
+git clone https://github.com/yourusername/budgetbuddy.git
 ```
 
-2. **Instale as dependências:**
-
+2. **Install dependencies:**
 ```bash
 cd budgetbuddy
 npm install
 ```
 
-3. **Configure as variáveis de ambiente:**
-Crie um arquivo `.env` na raiz do projeto com as seguintes configurações:
-
+3. **Configure environment variables:**
+Create a `.env` file in the project root with the following settings:
 ```plaintext
 NODE_ENV=development
 DATABASE_URL="./db/app.db"
 ```
-
-Para testes, você pode criar um arquivo `.env.test` com:
-
+For testing, you can create a `.env.test` file with:
 ```plaintext
 NODE_ENV=test
 DATABASE_URL="./db/test.db"
 ```
 
-4. **Inicie o servidor:**
-
+4. **Start the server:**
 ```bash
 npm run dev
 ```
 
-5. **Acesse o aplicativo:** Abra seu navegador e vá para `http://localhost:3000`.
+5. **Access the application:** Open your browser and go to `http://localhost:3000`.
 
-## Contribuições
+## Project Structure
+- `src/`: Source code directory
+- `db/`: Database files
+- `tests/`: Test files
+- `.env`: Environment configuration
+- `package.json`: Project dependencies and scripts
 
-Contribuições são sempre bem-vindas! Se você quiser ajudar a melhorar o BudgetBuddy, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+## API Endpoints
+- `POST /transactions`: Create a new transaction
+- `GET /transactions`: List all transactions
+- `GET /transactions/:id`: Retrieve a specific transaction
+- `GET /summary`: Get account summary
 
-## Licença
+## Error Handling
+The application uses comprehensive error handling to provide meaningful feedback:
+- Validation errors
+- Authentication errors
+- Database connection errors
 
-Este projeto está licenciado sob a Licença ISC - veja o arquivo **LICENSE** para mais detalhes.
+## Performance Considerations
+- Efficient database queries using Knex.js
+- Minimal overhead with Fastify
+- Lightweight SQLite database
 
-Sinta-se à vontade para explorar, testar e, mais importante, gerenciar suas finanças de forma eficaz com o BudgetBuddy! 💸
+## Future Roadmap
+- [ ] Implement transaction categories
+- [ ] Add data visualization
+- [ ] Create mobile application
+- [ ] Integrate with bank APIs
+
+## Contributions
+Contributions are always welcome! If you want to help improve BudgetBuddy, feel free to open an issue or send a pull request.
+
+## License
+This project is licensed under the ISC License - see the **LICENSE** file for more details.
+
+Feel free to explore, test, and most importantly, manage your finances effectively with BudgetBuddy! 💸
+
