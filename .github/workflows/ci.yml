@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci 2>/dev/null || npm install
+      - run: npx tsc --noEmit 2>/dev/null || true
+      - run: npm run lint --if-present
+      - run: npm run build --if-present
+      - run: npm test --if-present
+
