@@ -3,7 +3,7 @@
 </div>
 
 <p align="center">
-  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs) ![Fastify](https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs" alt="Node.js"/> <img src="https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify" alt="Fastify"/> <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite" alt="SQLite"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
 </p>
 
 ## Overview
