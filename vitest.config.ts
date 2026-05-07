@@ -7,5 +7,10 @@ export default defineConfig({
       DATABASE_CLIENT: 'sqlite',
       DATABASE_URL: './db/test.db',
     },
+    server: {
+      deps: {
+        inline: ['formidable', 'superagent', 'supertest', 'hexoid'],
+      },
+    },
   },
 })
