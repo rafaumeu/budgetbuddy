@@ -8,6 +8,7 @@ import {
 } from 'fastify-type-provider-zod'
 import { transactionRoutes } from './routes/transactions'
 import swaggerPlugin from './plugins/swagger'
+import rateLimit from '@fastify/rate-limit'
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -32,6 +33,8 @@ app.get('/health', async () => ({
   status: 'ok',
   timestamp: new Date().toISOString(),
 }))
+app.register(rateLimit, { max: 100, timeWindow: '1 minute' })
+
 app.register(transactionRoutes, {
   prefix: 'transactions',
 })
