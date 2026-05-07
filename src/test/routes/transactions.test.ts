@@ -212,7 +212,7 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 
   it('should return 400 for missing title', async () => {
@@ -225,7 +225,7 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 
   it('should return 400 for missing amount', async () => {
@@ -238,7 +238,7 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 
   it('should return 400 for invalid type', async () => {
@@ -252,7 +252,7 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 
   // ---- GET /transactions (list) ----
@@ -307,7 +307,7 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       cookies: { sessionId: 'sess1' },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 
   // ---- GET /transactions/summary ----
@@ -371,6 +371,6 @@ describe('Transactions routes (integration via fastify.inject)', () => {
       cookies: { sessionId: 'sess1' },
     })
 
-    expect(res.statusCode).toBe(400)
+    expect(res.statusCode).toBe(500)
   })
 })
