@@ -10,7 +10,7 @@
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
     "lint": "eslint src --ext .ts --fix",
     "test": "vitest",
-    "build": "tsup src/app.ts src/routes.ts src/server.ts src/client.ts src/database.ts src/env.ts src/middlewares src/plugins --out-dir build",
+    "build": "tsup src/app.ts src/routes.ts src/server.ts src/client.ts src/database.ts src/env.ts src/middlewares src/plugins --out-dir build --external fastify-type-provider-zod --external @fastify/swagger --external @fastify/swagger-ui --external @fastify/cors",
     "docker:up": "docker compose up -d",
     "docker:down": "docker compose down",
     "docker:build": "docker compose build"
@@ -24,6 +24,7 @@
     "@types/node": "^18.11.18",
     "@types/supertest": "2.0.12",
     "eslint": "^8.33.0",
+    "fastify-type-provider-zod": "^4.0.2",
     "sqlite3": "^5.1.4",
     "supertest": "6.3.3",
     "tsup": "^8.3.5",
