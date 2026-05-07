@@ -27,6 +27,25 @@ A lightweight personal finance manager for tracking income and expenses with **F
 | `GET` | `/transactions/:id` | Get specific transaction |
 | `GET` | `/summary` | Get balance summary |
 
+## API Documentation
+
+Interactive Swagger UI available at `/docs` when running the server.
+
+### Endpoints
+
+| Method | Route | Description |
+|---|---|---|
+| `POST` | `/transactions` | Create a credit or debit transaction |
+| `GET` | `/transactions` | List all transactions |
+| `GET` | `/transactions/:id` | Get a specific transaction |
+| `GET` | `/summary` | Get account balance summary |
+
+### Generate Typed Client
+
+```bash
+npx orval  # generates typed API client from OpenAPI spec
+```
+
 ## Tech Stack
 
 | Technology | Purpose |
