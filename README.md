@@ -3,7 +3,14 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs" alt="Node.js"/> <img src="https://img.shields.io/badge/Fastify-000000?style=for-the-badge&logo=fastify" alt="Fastify"/> <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite" alt="SQLite"/> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Node-18+-339933?style=for-the-badge&logo=nodejs" alt="Node"/>
+  <img src="https://img.shields.io/badge/Fastify-4-000000?style=for-the-badge&logo=fastify" alt="Fastify"/>
+  <img src="https://img.shields.io/badge/TypeScript-4-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Knex-2-EC4899" alt="Knex"/>
+  <img src="https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite" alt="SQLite"/>
+  <img src="https://img.shields.io/badge/Vitest-2-6E9F18" alt="Vitest"/>
+  <img src="https://img.shields.io/badge/Docker-ready-2496ED?style=for-the-badge&logo=docker" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Zod-3-3E67B1" alt="Zod"/>
 </p>
 
 ## Overview
