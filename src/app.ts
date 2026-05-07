@@ -27,6 +27,11 @@ app.setErrorHandler((error, request, reply) => {
 
 app.register(cookie)
 app.register(swaggerPlugin)
+
+app.get('/health', async () => ({
+  status: 'ok',
+  timestamp: new Date().toISOString(),
+}))
 app.register(transactionRoutes, {
   prefix: 'transactions',
 })
