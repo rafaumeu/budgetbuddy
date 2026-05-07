@@ -56,6 +56,24 @@ npx orval  # generates typed API client from OpenAPI spec
 | **Knex** | SQL query builder |
 | **Zod** | Input validation |
 
+## Docker
+
+```bash
+# Start services (PostgreSQL + App)
+npm run docker:up
+
+# Stop
+npm run docker:down
+
+# Rebuild
+npm run docker:build
+```
+
+### Docker Compose Services
+
+- **postgres** — PostgreSQL 14 on port 5432
+- **app** — Application on port 3333
+
 ## Getting Started
 
 ```bash
