@@ -33,7 +33,7 @@
     "vitest": "^2.1.4"
   },
   "dependencies": {
-    "@fastify/cookie": "^8.3.0",
+    "@fastify/cookie": "^11.0.2",
     "@fastify/rate-limit": "^10.3.0",
     "dotenv": "^16.4.5",
     "fastify": "^4.12.0",
