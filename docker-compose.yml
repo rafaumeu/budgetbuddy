@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: bitnami/postgresql:14
+    image: postgres:14
     ports:
       - '5432:5432'
     environment:
@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: budgetbuddy
     volumes:
-      - postgres_data:/bitnami/postgresql
+      - postgres_data:/var/lib/postgresql/data
 
   app:
     build: .
