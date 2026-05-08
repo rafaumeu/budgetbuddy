@@ -2,30 +2,6 @@
 # yarn lockfile v1
 
 
-"@esbuild-kit/cjs-loader@^2.4.1":
-  version "2.4.4"
-  resolved "https://registry.npmjs.org/@esbuild-kit/cjs-loader/-/cjs-loader-2.4.4.tgz"
-  integrity sha512-NfsJX4PdzhwSkfJukczyUiZGc7zNNWZcEAyqeISpDnn0PTfzMJR1aR8xAIPskBejIxBJbIgCCMzbaYa9SXepIg==
-  dependencies:
-    "@esbuild-kit/core-utils" "^3.2.3"
-    get-tsconfig "^4.7.0"
-
-"@esbuild-kit/core-utils@^3.0.0", "@esbuild-kit/core-utils@^3.2.3", "@esbuild-kit/core-utils@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.npmjs.org/@esbuild-kit/core-utils/-/core-utils-3.3.2.tgz"
-  integrity sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==
-  dependencies:
-    esbuild "~0.18.20"
-    source-map-support "^0.5.21"
-
-"@esbuild-kit/esm-loader@^2.5.4":
-  version "2.6.5"
-  resolved "https://registry.npmjs.org/@esbuild-kit/esm-loader/-/esm-loader-2.6.5.tgz"
-  integrity sha512-FxEMIkJKnodyA1OaCUoEvbYRkoZlLZ4d/eXFu9Fh8CbBBgP5EmZxrfTRyN0qpXZ4vOvqnE5YdRdcrmUUXuU+dA==
-  dependencies:
-    "@esbuild-kit/core-utils" "^3.3.2"
-    get-tsconfig "^4.7.0"
-
 "@esbuild/aix-ppc64@0.21.5":
   version "0.21.5"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.21.5.tgz#c7184a326533fcdf1b8ee0733e21c713b975575f"
@@ -2512,10 +2488,10 @@ get-symbol-description@^1.0.2:
     es-errors "^1.3.0"
     get-intrinsic "^1.2.4"
 
-get-tsconfig@^4.7.0:
-  version "4.8.1"
-  resolved "https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.8.1.tgz"
-  integrity sha512-k9PN+cFBmaLWtVz29SkUoqU5O0slLuHJXt/2P+tMVFT+phsSGXGkp9t3rQIqdz0e+06EHNGs3oM6ZX1s2zHxRg==
+get-tsconfig@^4.7.2:
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/get-tsconfig/-/get-tsconfig-4.14.0.tgz#985d85c52a9903864280ccc2448d413fbf1efed8"
+  integrity sha512-yTb+8DXzDREzgvYmh6s9vHsSVCHeC0G3PI5bEXNBHtmshPnO+S5O7qgLEOn0I5QvMy6kpZN8K1NKGyilLb93wA==
   dependencies:
     resolve-pkg-maps "^1.0.0"
 
@@ -4655,16 +4631,16 @@ tsutils@^3.21.0:
   dependencies:
     tslib "^1.8.1"
 
-tsx@3.12.2:
-  version "3.12.2"
-  resolved "https://registry.npmjs.org/tsx/-/tsx-3.12.2.tgz"
-  integrity sha512-ykAEkoBg30RXxeOMVeZwar+JH632dZn9EUJVyJwhfag62k6UO/dIyJEV58YuLF6e5BTdV/qmbQrpkWqjq9cUnQ==
+tsx@3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/tsx/-/tsx-3.14.0.tgz#be6e2176b6f210fe8f48124fb6e22e0f075e927b"
+  integrity sha512-xHtFaKtHxM9LOklMmJdI3BEnQq/D5F73Of2E1GDrITi9sgoVkvIsrQUTY1G8FlmGtA+awCI4EBlTRRYxkL2sRg==
   dependencies:
-    "@esbuild-kit/cjs-loader" "^2.4.1"
-    "@esbuild-kit/core-utils" "^3.0.0"
-    "@esbuild-kit/esm-loader" "^2.5.4"
+    esbuild "~0.18.20"
+    get-tsconfig "^4.7.2"
+    source-map-support "^0.5.21"
   optionalDependencies:
-    fsevents "~2.3.2"
+    fsevents "~2.3.3"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
