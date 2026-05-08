@@ -1,8 +1,9 @@
 FROM node:22-slim AS base
 WORKDIR /app
 
-# Install deps
+# Install deps (needs build tools for sqlite3 native)
 FROM base AS deps
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json .npmrc ./
 RUN npm ci
 
@@ -13,7 +14,7 @@ COPY . .
 RUN npm run build
 
 # Production
-FROM base AS runner
+FROM node:22-slim AS runner
 ENV NODE_ENV=production
 WORKDIR /app
 COPY --from=builder /app/build ./build
