@@ -2284,10 +2284,10 @@ fastify-type-provider-zod@^4.0.2:
     "@fastify/error" "^4.0.0"
     zod-to-json-schema "^3.23.3"
 
-fastify@^4.12.0:
-  version "4.28.1"
-  resolved "https://registry.npmjs.org/fastify/-/fastify-4.28.1.tgz"
-  integrity sha512-kFWUtpNr4i7t5vY2EJPCN2KgMVpuqfU4NjnJNCgiNB900oiDeYqaNDRcAfeBbOF5hGixixxcKnOU4KN9z6QncQ==
+fastify@^4.29.1:
+  version "4.29.1"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-4.29.1.tgz#fbd91a507e3a575c6c8032ad5d1bfd801004fb3b"
+  integrity sha512-m2kMNHIG92tSNWv+Z3UeTR9AWLLuo7KctC7mlFPtMEVrfjIhmQhkQnT9v15qA/BfVq3vvj134Y0jl9SBje3jXQ==
   dependencies:
     "@fastify/ajv-compiler" "^3.5.0"
     "@fastify/error" "^3.4.0"
